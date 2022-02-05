@@ -1,0 +1,24 @@
+import React from "react"
+import data from "../yourdata"
+
+const Skills = () => {
+  return (
+    <div className="section" id="skills">
+      <div className="container">
+        <div className="skills-container">
+          <h1>Skills</h1>
+          <div className="skills-grid">
+            {data.skills.map((skill, index) => (
+              <div className="skill" key={index}>
+                <img src={skill.img} alt=""></img>
+                <h2>{skill.para}</h2>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Skills
